@@ -15,6 +15,12 @@ class Api::V1::DirectUploadsController < ActiveStorage::DirectUploadsController
     render json: json_resp
   end
 
+  def index
+    render json: {
+      message: 'hello'
+    }
+  end
+
   private
 
     def build_blob_key
