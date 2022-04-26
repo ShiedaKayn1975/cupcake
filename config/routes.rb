@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post 'direct_uploads' , to: 'direct_uploads#create'
+      get 'direct_uploads', to: 'direct_uploads#index'
     end
   end
 end
