@@ -19,9 +19,9 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # Specifies the `pidfile` that Puma will use.
 # pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
-bind "unix:///home/ubuntu/cupcake/shared/tmp/sockets/puma.sock"
+# bind "unix:///home/ubuntu/cupcake/shared/tmp/sockets/puma.sock"
 pidfile '/home/ubuntu/cupcake/shared/tmp/pids/puma.pid'
-state_path '/home/ubuntu/cupcake/shared/tmp/pids/puma.state'
+# state_path '/home/ubuntu/cupcake/shared/tmp/pids/puma.state'
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked web server processes. If using threads and workers together

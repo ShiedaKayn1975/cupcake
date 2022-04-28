@@ -9,6 +9,8 @@ set :rvm_type, :system                # Defaults to: :auto
 # set :rvm_custom_path, '~/.myveryownrvm'  # only needed if not detected
 
 set :deploy_to, "/home/ubuntu/cupcake"
+set :pty,             true
+set :stage,           :production
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/puma.sock"
@@ -24,6 +26,7 @@ set :linked_files, fetch(:linked_files, []).push("config/master.key")
 append :linked_files, ".env.production"
 append :linked_dirs, "public"
 append :linked_dirs, "storage"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "public/uploads"
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'

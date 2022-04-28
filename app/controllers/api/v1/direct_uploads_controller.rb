@@ -1,6 +1,6 @@
 class Api::V1::DirectUploadsController < ActiveStorage::DirectUploadsController
   # before_action :authenticate_user!, only: [:create]
-  skip_before_action :verify_authenticity_token, only: [:create]
+  skip_before_action :verify_authenticity_token, only: [:create, :hello]
   
   def create
     key = build_blob_key
@@ -15,7 +15,7 @@ class Api::V1::DirectUploadsController < ActiveStorage::DirectUploadsController
     render json: json_resp
   end
 
-  def index
+  def hello
     render json: {
       message: 'hello'
     }
