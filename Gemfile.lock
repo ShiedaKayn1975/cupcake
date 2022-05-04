@@ -149,6 +149,10 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.5.1)
+    net-imap (0.2.3)
+      digest
+      net-protocol
+      strscan
     net-pop (0.1.1)
       digest
       net-protocol
@@ -237,6 +241,7 @@ GEM
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    strscan (3.0.1)
     thor (1.2.1)
     thread_safe (0.3.6)
     timeout (0.2.0)
@@ -278,6 +283,8 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jwt
   listen (~> 3.2)
+  matrix
+  net-imap
   net-pop
   net-smtp
   pg (>= 0.18, < 2.0)

@@ -33,6 +33,8 @@ gem 'enumerize'
 gem 'net-smtp', require: false
 gem "aws-sdk-s3"
 gem 'net-pop', require: false
+gem 'net-imap', require: false
+gem 'matrix', require: false
 
 group :development, :test do
   gem 'pry-rails'
