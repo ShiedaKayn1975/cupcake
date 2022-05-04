@@ -32,7 +32,7 @@ gem 'enumerize'
 # gem 'sendinblue', '~> 2.2'
 gem 'net-smtp', require: false
 gem "aws-sdk-s3"
-gem 'net-pop'
+gem 'net-pop', require: false
 
 group :development, :test do
   gem 'pry-rails'
