@@ -23,10 +23,10 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to true if using ActiveRecord
 
 set :linked_files, fetch(:linked_files, []).push("config/master.key")
-append :linked_files, ".env.production"
+append :linked_files, ".env"
 append :linked_dirs, "public"
 append :linked_dirs, "storage"
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "public/uploads"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache"
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
